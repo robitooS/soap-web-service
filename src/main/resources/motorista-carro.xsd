@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://localhost:8080/motorista"
+           xmlns="http://localhost:8080/motorista"
+           elementFormDefault="qualified">
+
+    <!-- Requisição para Sincronização do Banco -->
+    <xs:element name="syncBancoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Dados do Motorista -->
+                <xs:element name="nome" type="xs:string"/>
+                <xs:element name="cpf" type="xs:string"/>
+                <xs:element name="cnh" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="celular" type="xs:string"/>
+                <xs:element name="cep" type="xs:string"/>
+                <xs:element name="logradouro" type="xs:string"/>
+                <xs:element name="numero" type="xs:string"/>
+                <xs:element name="bairro" type="xs:string"/>
+                <xs:element name="cidade" type="xs:string"/>
+                <xs:element name="estado" type="xs:string"/>
+
+                <!-- Dados do Carro -->
+                <xs:element name="placa" type="xs:string"/>
+                <xs:element name="marca" type="xs:string"/>
+                <xs:element name="modelo" type="xs:string"/>
+                <xs:element name="ano" type="xs:int"/>
+                <xs:element name="cor" type="xs:string"/>
+                <xs:element name="kmAtual" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Resposta de Sincronização -->
+    <xs:element name="syncBancoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
