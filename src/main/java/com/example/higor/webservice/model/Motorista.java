@@ -22,10 +22,11 @@ public class Motorista {
     private String celular;
     private String cep;
     private String logradouro;
-    private String numero;
+    private String complemento;
     private String bairro;
     private String cidade;
     private String estado;
+
 
     // Dados do carro
     private String placa;
@@ -33,7 +34,7 @@ public class Motorista {
     private String modelo;
     private Integer ano;
     private String cor;
-    private Double kmAtual;
+    private String kmAtual;
 
     public Long getId() {
         return id;
@@ -99,12 +100,12 @@ public class Motorista {
         this.logradouro = logradouro;
     }
 
-    public String getNumero() {
-        return numero;
+    public String getComplemento() {
+        return complemento;
     }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
     }
 
     public String getBairro() {
@@ -171,11 +172,11 @@ public class Motorista {
         this.cor = cor;
     }
 
-    public Double getKmAtual() {
+    public String getKmAtual() {
         return kmAtual;
     }
 
-    public void setKmAtual(Double kmAtual) {
+    public void setKmAtual(String kmAtual) {
         this.kmAtual = kmAtual;
     }
 }

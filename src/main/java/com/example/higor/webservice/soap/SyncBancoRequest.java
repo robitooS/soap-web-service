@@ -18,10 +18,10 @@ public class SyncBancoRequest {
     private String celular;
     private String cep;
     private String logradouro;
-    private String numero;
-    private String bairro;
+    private String complemento;
     private String cidade;
     private String estado;
+    private String bairro;
 
     // Dados do Carro
     private String placa;
@@ -29,7 +29,7 @@ public class SyncBancoRequest {
     private String modelo;
     private int ano;
     private String cor;
-    private double kmAtual;
+    private String kmAtual;
 
     public SyncBancoRequest() {}
 
@@ -90,14 +90,13 @@ public class SyncBancoRequest {
         this.logradouro = logradouro;
     }
 
-    @XmlElement(name = "numero", namespace = "http://localhost:8080/motorista")
-    public String getNumero() {
-        return numero;
+    @XmlElement(name = "complemento", namespace = "http://localhost:8080/motorista")
+    public String getComplemento() {
+        return complemento;
     }
-    public void setNumero(String numero) {
-        this.numero = numero;
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
     }
-
 
     @XmlElement(name = "bairro", namespace = "http://localhost:8080/motorista")
     public String getBairro() {
@@ -165,10 +164,10 @@ public class SyncBancoRequest {
     }
 
     @XmlElement(name = "kmAtual", namespace = "http://localhost:8080/motorista")
-    public double getKmAtual() {
+    public String getKmAtual() {
         return kmAtual;
     }
-    public void setKmAtual(double kmAtual) {
+    public void setKmAtual(String kmAtual) {
         this.kmAtual = kmAtual;
     }
 }

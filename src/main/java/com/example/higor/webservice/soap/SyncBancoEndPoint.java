@@ -25,18 +25,18 @@ public class SyncBancoEndPoint {
         Motorista motorista = new Motorista();
         
         // Dados do motorista  
-        motorista.setCpf(syncBancoRequest.getCpf());
         motorista.setNome(syncBancoRequest.getNome());
+        motorista.setCpf(syncBancoRequest.getCpf());
         motorista.setCnh(syncBancoRequest.getCnh());
         motorista.setEmail(syncBancoRequest.getEmail());
         motorista.setCelular(syncBancoRequest.getCelular());
         motorista.setCep(syncBancoRequest.getCep());
         motorista.setLogradouro(syncBancoRequest.getLogradouro());
-        motorista.setNumero(syncBancoRequest.getNumero());
-        motorista.setBairro(syncBancoRequest.getBairro());
+        motorista.setComplemento(syncBancoRequest.getComplemento());
         motorista.setCidade(syncBancoRequest.getCidade());
         motorista.setEstado(syncBancoRequest.getEstado());
-        
+        motorista.setBairro(syncBancoRequest.getBairro());
+
         // Dados do carro do motorista 
         motorista.setPlaca(syncBancoRequest.getPlaca());
         motorista.setMarca(syncBancoRequest.getMarca());
